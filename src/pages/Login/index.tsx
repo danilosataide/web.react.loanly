@@ -1,24 +1,35 @@
 import React from 'react';
 import logo from '../../logo.svg';
+import './styles.css';
 
+
+import { Form,  Button } from 'react-bootstrap';
 
 function Login() {
   return (
-    <div className="Login">
-      <header className="Login-header">
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Form className='formLogin'>
+      <h2>
+        Faça seu login!
+      </h2>
+      <Form.Group className="mb-2" controlId="formBasicEmail">
+        <Form.Label>E-mail</Form.Label>
+        <Form.Control type="email" placeholder="Informe seu e-mail" />
+        <Form.Text className="text-muted">
+          We'll never share your email with anyone else.
+        </Form.Text>
+      </Form.Group>
+
+      <Form.Group className="mb-2" controlId="formBasicPassword">
+        <Form.Label>Senha</Form.Label>
+        <Form.Control type="password" placeholder="Informe sua senha" />
+      </Form.Group>
+      <Form.Group className="mb-4" controlId="formBasicCheckbox">
+        <Form.Check type="checkbox" label="Check me out" />
+      </Form.Group>
+      <Button variant="primary" type="submit">
+        Entrar
+      </Button>
+    </Form>
   );
 }
 
