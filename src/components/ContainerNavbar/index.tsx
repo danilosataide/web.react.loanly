@@ -50,17 +50,13 @@ function ContainerNavbar() {
             </NavDropdown>
           </Nav>
           <Nav>
-            <Nav.Link href="#locacao">
-              <div className='tender'>
-                <IoDocumentTextOutline className="" size="1rem" color="#fff"/>Orçamento
-              </div>
+            <Nav.Link className='navl' href="#locacao">
+                <IoDocumentTextOutline className="m-1" size="1rem" color="#fff"/>Orçamento
             </Nav.Link>
-            <Nav.Link href="#locacao">
-              <div className='tender'>
-                <IoFileTrayFull className="" size="1rem" color="#fff"/>Minhas locações
-              </div>
-              </Nav.Link>
-            <Nav.Link eventKey={3} href="#login">
+            <Nav.Link className='navl' href="#locacao">
+                <IoFileTrayFull className="m-1" size="1rem" color="#fff"/>Minhas locações
+            </Nav.Link>
+            <Nav.Link className='navl' eventKey={3} href="#login">
               Login
             </Nav.Link>
           </Nav>

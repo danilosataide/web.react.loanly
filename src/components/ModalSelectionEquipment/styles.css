@@ -3,3 +3,11 @@
     /* justify-items: center; */
     padding: 10px;
 }
+
+.alertModal {
+    color: #00c89b
+}
+
+.alertModal:hover {
+    color: #00c89d66
+}

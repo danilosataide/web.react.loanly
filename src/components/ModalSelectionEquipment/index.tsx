@@ -5,8 +5,7 @@ import Container from 'react-bootstrap/Container';
 import Modal from 'react-bootstrap/Modal';
 import Row from 'react-bootstrap/Row';
 import Form from 'react-bootstrap/Form';
-
-import { MdAdd } from "react-icons/md";
+import { Alert } from 'react-bootstrap';
 
 import "./styles.css";
  
@@ -19,10 +18,12 @@ function ModalSelectionEquipment() {
 
     return (
         <>
-            <Button className='AddEquipment' variant="primary" size="sm" onClick={handleShow}>
+            {/* <Button className='AddEquipment' variant="primary" size="sm" onClick={handleShow}>
                 <MdAdd size="1em" color="#000"/> 
                 {' '}Escolher equipamento
-            </Button>
+            </Button> */}
+            
+            <small><Alert.Link onClick={handleShow} className='alertModal' href="#">Escolher equipamento</Alert.Link></small>
 
             <Modal
                 show={show}

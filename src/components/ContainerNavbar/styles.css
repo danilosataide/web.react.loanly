@@ -11,3 +11,11 @@
     padding-left: 10px;
 }
 
+.navl {
+    border-left: 1px solid;
+}
+
+.navr {
+    border-right: 1px solid;
+}
+
