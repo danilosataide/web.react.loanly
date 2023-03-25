@@ -14,7 +14,7 @@ function CardEquipment() {
           <CarouselImages />
           <Card.Body className="text-center">
               <Card.Title className="text-center">JCB 116D</Card.Title>
-              <Card.Subtitle className="mb-2 text-muted">Card Subtitle</Card.Subtitle>
+              <Card.Subtitle className="mb-2 text-muted">description</Card.Subtitle>
               <Card.Text>
               <FaWeightHanging size="1.5em" color="#00C89B"/> 3.450 Kg  
               <ImPower size="1.5em" color="#00C89B"/> 115 Hp

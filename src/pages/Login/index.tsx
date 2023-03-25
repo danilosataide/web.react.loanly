@@ -21,14 +21,17 @@ function Login() {
 
       <Form.Group className="mb-2" controlId="formBasicPassword">
         <Form.Label>Senha</Form.Label>
-        <Form.Control type="password" placeholder="Informe sua senha" />
+        <Form.Control autoFocus type="password" placeholder="Informe sua senha" />
       </Form.Group>
       <Form.Group className="mb-4" controlId="formBasicCheckbox">
-        <Form.Check type="checkbox" label="Check me out" />
+        <Form.Check type="checkbox" label="Mostrar senha" />
       </Form.Group>
-      <Button variant="primary" type="submit">
-        Entrar
-      </Button>
+      <div className="d-grid gap-2">
+        <Button variant="primary" type="submit">
+          Entrar
+        </Button>
+      </div>
+      
     </Form>
   );
 }

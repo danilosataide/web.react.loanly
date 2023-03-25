@@ -8,6 +8,8 @@ import { ThemeProvider } from 'react-bootstrap';
 import ContainerNavbar from './components/ContainerNavbar';
 import Catalog from './pages/Catalog';
 import Home from './pages/Home';
+import Equipment from './pages/Equipment';
+import Tender from './pages/Tender';
 function App() {
   return (
     <div className="App">
@@ -18,7 +20,9 @@ function App() {
         <ContainerNavbar />
         {/* <Login></Login> */}
         {/* <Home></Home> */}
-        <Catalog></Catalog>
+        {/* <Catalog></Catalog> */}
+        {/* <Equipment></Equipment> */}
+        <Tender></Tender>
       </ThemeProvider>
     </div>
   );

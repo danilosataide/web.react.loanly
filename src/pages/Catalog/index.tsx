@@ -10,7 +10,7 @@ function Catalog() {
         <Container fluid="md" className="">
             <Row>
                 <Col>
-                    <h1 className="heading">Escavadeiras</h1>
+                    <h1 className="heading">Categoria</h1>
                     <h5 className="lead">Para locação</h5>
                 </Col>
             </Row>

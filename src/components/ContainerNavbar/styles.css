@@ -3,3 +3,11 @@
     border-color: #000;
 }
 
+.div {
+    align-self: center;
+    border-left: 1px solid;
+    border-right: 1px solid;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+

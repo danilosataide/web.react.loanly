@@ -20,8 +20,8 @@ function CarouselImages() {
       {Array.from({ length: 4 }).map((_, idx) => (
           <Carousel.Item className='CarouselItem'>
           <img
-            className="d-block w-100"
-            src={Img1}
+            className="d-block w-100 img-fluid"
+            src={Img2}
             alt="First slide"
           />
         </Carousel.Item>

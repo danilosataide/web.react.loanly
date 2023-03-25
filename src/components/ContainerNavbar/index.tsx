@@ -10,6 +10,9 @@ import Logo from "../../assets/hammer_logo1-removebg(with name).png"
 
 import Login from '../../pages/Login';
 
+import Equipment from '../../pages/Equipment';
+import { IoFileTrayFull, IoDocumentTextOutline } from "react-icons/io5";
+
 import "./styles.css";
 
 function ContainerNavbar() {
@@ -47,7 +50,16 @@ function ContainerNavbar() {
             </NavDropdown>
           </Nav>
           <Nav>
-            <Nav.Link href="#locacao">Minhas locações</Nav.Link>
+            <Nav.Link href="#locacao">
+              <div className='tender'>
+                <IoDocumentTextOutline className="" size="1rem" color="#fff"/>Orçamento
+              </div>
+            </Nav.Link>
+            <Nav.Link href="#locacao">
+              <div className='tender'>
+                <IoFileTrayFull className="" size="1rem" color="#fff"/>Minhas locações
+              </div>
+              </Nav.Link>
             <Nav.Link eventKey={3} href="#login">
               Login
             </Nav.Link>
