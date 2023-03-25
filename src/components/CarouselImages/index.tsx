@@ -8,7 +8,7 @@ import Img4 from "../../assets/foto4.png";
 
 import "./styles.css";
 
-function CarouselItem() {
+function CarouselImages() {
   const [index, setIndex] = useState(0);
 
   const handleSelect = (selectedIndex: React.SetStateAction<number>, e: any) => {
@@ -51,4 +51,4 @@ function CarouselItem() {
   );
 }
 
-export default CarouselItem;
+export default CarouselImages;

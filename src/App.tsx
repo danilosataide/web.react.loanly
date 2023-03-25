@@ -6,8 +6,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 // import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import { ThemeProvider } from 'react-bootstrap';
 import ContainerNavbar from './components/ContainerNavbar';
-import Dashboard from './components/Dashboard';
-
+import Catalog from './pages/Catalog';
+import Home from './pages/Home';
 function App() {
   return (
     <div className="App">
@@ -17,7 +17,8 @@ function App() {
       >
         <ContainerNavbar />
         {/* <Login></Login> */}
-        <Dashboard></Dashboard>
+        {/* <Home></Home> */}
+        <Catalog></Catalog>
       </ThemeProvider>
     </div>
   );
