@@ -9,7 +9,7 @@ function Login() {
   return (
     <Form className='formLogin'>
       <h2>
-        Faça seu login!
+        Faça seu Login!
       </h2>
       <Form.Group className="mb-2" controlId="formBasicEmail">
         <Form.Label>E-mail</Form.Label>

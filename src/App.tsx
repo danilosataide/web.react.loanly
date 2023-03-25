@@ -16,9 +16,8 @@ function App() {
         minBreakpoint="xxs"
       >
         <ContainerNavbar />
-        <Login></Login>
-        {/* <Dashboard> </Dashboard> */}
-
+        {/* <Login></Login> */}
+        <Dashboard></Dashboard>
       </ThemeProvider>
     </div>
   );
