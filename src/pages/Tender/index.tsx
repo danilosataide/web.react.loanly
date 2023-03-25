@@ -1,19 +1,12 @@
 import React, { useState } from 'react';
 import './styles.css';
 
-import { FaWeightHanging } from "react-icons/fa";
-import { ImPower } from "react-icons/im";
-
-import { Container, Row, Col, Form,  Button } from 'react-bootstrap';
+import { Container, Form,  Button } from 'react-bootstrap';
 
 import ModalSelectionEquipment from '../../components/ModalSelectionEquipment';
+import ToastEquipment from '../../components/ToastEquipment';
 
 function Tender() {
-    const [show, setShow] = useState(false);
-
-    const handleClose = () => setShow(false);
-    const handleShow = () => setShow(true);
-
     return (
 
         <Container className="container py- 3">
@@ -35,14 +28,15 @@ function Tender() {
                 <Form className='formTender'>
                     <div className='mb-4'>
                         <span className="fs-5"><p>Equipamentos</p></span>
-                        <ModalSelectionEquipment />
+                        <ModalSelectionEquipment/>
                     </div>
                     <div className='mb-4'>
-                        {/* <span className="fs-5"><p>Equipamentos</p></span>
-                        <Button className='AddEquipment' variant="primary" size="sm" onClick={handleShow}>
-                            <MdAdd size="1em" color="#000"/> 
-                            {' '}Escolher equipamento
-                        </Button> */}
+                        <ToastEquipment/>
+                        {/* <ToastEquipment /> */}
+                    </div>
+                    <div className='mb-4'>
+                        <span className="fs-5"><p>Período</p></span>
+                        <ModalSelectionEquipment />
                     </div>
                 </Form>
             </main>
