@@ -10,6 +10,7 @@ import Catalog from './pages/Catalog';
 import Home from './pages/Home';
 import Equipment from './pages/Equipment';
 import Tender from './pages/Tender';
+import FormClient from './pages/FormClient';
 function App() {
   return (
     <div className="App">
@@ -18,11 +19,12 @@ function App() {
         minBreakpoint="xxs"
       >
         <ContainerNavbar />
-        {/* <Login></Login> */}
         {/* <Home></Home> */}
+        {/* <Login></Login>  */}
         {/* <Catalog></Catalog> */}
         {/* <Equipment></Equipment> */}
-        <Tender></Tender>
+        {/* <Tender></Tender> */}
+        <FormClient></FormClient>
       </ThemeProvider>
     </div>
   );

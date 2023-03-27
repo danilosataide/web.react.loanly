@@ -32,8 +32,8 @@ function ContainerNavbar() {
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link href="#home">Home</Nav.Link>
-            <NavDropdown title="Máquinas" id="collasible-nav-dropdown">
+            <Nav.Link className='fw-bold active' href="#home">Home</Nav.Link>
+            <NavDropdown className='fw-bold' title="Máquinas" id="collasible-nav-dropdown">
               <NavDropdown.Item href="#action/3.1">Escavadeiras</NavDropdown.Item>
               <NavDropdown.Item href="#action/3.2">Retroescavadeiras</NavDropdown.Item>
               <NavDropdown.Item href="#action/3.3">Pá Carregadeiras</NavDropdown.Item>
@@ -50,13 +50,13 @@ function ContainerNavbar() {
             </NavDropdown>
           </Nav>
           <Nav>
-            <Nav.Link className='navl' href="#locacao">
+            <Nav.Link className='navl fw-bold' href="#tender">
                 <IoDocumentTextOutline className="m-1" size="1rem" color="#fff"/>Orçamento
             </Nav.Link>
-            <Nav.Link className='navl' href="#locacao">
+            <Nav.Link className='navl fw-bold' href="#locacoes">
                 <IoFileTrayFull className="m-1" size="1rem" color="#fff"/>Minhas locações
             </Nav.Link>
-            <Nav.Link className='navl' eventKey={3} href="#login">
+            <Nav.Link className='navl fw-bold' eventKey={3} href="#login">
               Login
             </Nav.Link>
           </Nav>
