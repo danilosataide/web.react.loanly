@@ -9,7 +9,7 @@ import { UserInterface } from '../models/interfaces/user.interface';
 
 //#region ReactElement
 
-interface AuthInterface {
+export interface AuthInterface {
   user?: UserInterface;
   signIn: (email: string, password: string) => Promise<boolean>;
   logOut: () => void;

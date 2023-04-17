@@ -20,11 +20,11 @@ function App() {
       >
         <ContainerNavbar />
         {/* <Home></Home> */}
-        {/* <Login></Login>  */}
+        <Login />
         {/* <Catalog></Catalog> */}
         {/* <Equipment></Equipment> */}
         {/* <Tender></Tender> */}
-        <FormClient></FormClient>
+        {/* <FormClient></FormClient>*/}
       </ThemeProvider>
     </div>
   );

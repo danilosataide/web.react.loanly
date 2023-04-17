@@ -1,11 +1,16 @@
-import React from 'react';
-import logo from '../../logo.svg';
+import React, { ReactElement, useState } from 'react';
+import { Form,  Button } from 'react-bootstrap';
+import { useAuthContext } from '../../hooks/useAuthContext';
 import './styles.css';
 
+export default function Login(): ReactElement {
 
-import { Form,  Button } from 'react-bootstrap';
+  const { signIn } = useAuthContext();
+  const [form, setForm] = useState<{ email: string, password: string }>({
+    email: '',
+    password: '',
+  });
 
-function Login() {
   return (
     <Form className='formLogin'>
       <h2>
@@ -13,27 +18,28 @@ function Login() {
       </h2>
       <Form.Group className="mb-2" controlId="formBasicEmail">
         <Form.Label>E-mail</Form.Label>
-        <Form.Control type="email" placeholder="Informe seu e-mail" />
-        <Form.Text className="text-muted">
-          We'll never share your email with anyone else.
-        </Form.Text>
+        <Form.Control
+          onChange={ event => setForm({ ...form, email: event?.target?.value }) }
+          type="email"
+          placeholder="Informe seu e-mail" />
       </Form.Group>
 
       <Form.Group className="mb-2" controlId="formBasicPassword">
         <Form.Label>Senha</Form.Label>
-        <Form.Control autoFocus type="password" placeholder="Informe sua senha" />
+        <Form.Control
+          onChange={ event => setForm({ ...form, password: event?.target?.value }) }
+          autoFocus
+          type="password"
+          placeholder="Informe sua senha" />
       </Form.Group>
       <Form.Group className="mb-4" controlId="formBasicCheckbox">
         <Form.Check type="checkbox" label="Mostrar senha" />
       </Form.Group>
       <div className="d-grid gap-2">
-        <Button variant="primary" type="submit">
-          Entrar
+        <Button onClick={ async () => await signIn(form.email, form.password) } variant="primary">
+          Login
         </Button>
       </div>
-      
     </Form>
   );
 }
-
-export default Login;
