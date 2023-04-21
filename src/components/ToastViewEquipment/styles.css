@@ -1,0 +1,7 @@
+.alert-link {
+    color: rgb(71, 86, 247)
+}
+
+.alert-link:hover {
+    color: rgba(71, 86, 247, 0.577)
+}

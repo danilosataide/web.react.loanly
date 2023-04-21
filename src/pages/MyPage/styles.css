@@ -1,0 +1,15 @@
+.heading {
+    background: #00C89B;
+    display: inline-block;
+    margin-bottom: 15px;
+    height: 0.5rem;
+    width: auto;
+}
+
+.lead {
+    font-weight: lighter;
+}
+
+h1 {
+    font-weight: lighter;
+}

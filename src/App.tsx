@@ -11,6 +11,9 @@ import Home from './pages/Home';
 import Equipment from './pages/Equipment';
 import Tender from './pages/Tender';
 import FormClient from './pages/FormClient';
+import MyPage from './pages/MyPage';
+import Dashboard from './pages/Dashboard';
+
 function App() {
   return (
     <div className="App">
@@ -19,12 +22,15 @@ function App() {
         minBreakpoint="xxs"
       >
         <ContainerNavbar />
+        <Dashboard />
+        <MyPage></MyPage>
+        {/* <Tender></Tender> */}
         {/* <Home></Home> */}
-        <Login />
+        {/* <Login /> */}
         {/* <Catalog></Catalog> */}
         {/* <Equipment></Equipment> */}
         {/* <Tender></Tender> */}
-        {/* <FormClient></FormClient>*/}
+        {/* <FormClient></FormClient> */}
       </ThemeProvider>
     </div>
   );
