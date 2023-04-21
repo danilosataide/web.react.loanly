@@ -23,7 +23,7 @@ function App() {
       >
         <ContainerNavbar />
         <Dashboard />
-        <MyPage></MyPage>
+        {/* <MyPage></MyPage> */}
         {/* <Tender></Tender> */}
         {/* <Home></Home> */}
         {/* <Login /> */}
