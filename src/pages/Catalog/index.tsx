@@ -22,7 +22,7 @@ function Catalog() {
             </div>
             
             <Row xs={2} md={2} lg={4} className="justify-content-md-center g-4">
-            {Array.from({ length: 7 }).map((_, idx) => (
+            {Array.from({ length: 1 }).map((_, idx) => (
                 <Col>
                     <CardItem/>
                 </Col>
