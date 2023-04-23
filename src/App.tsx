@@ -1,7 +1,7 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import React from 'react';
 import { ThemeProvider } from 'react-bootstrap';
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { createBrowserRouter, Router, RouterProvider } from 'react-router-dom';
 import './App.css';
 import ContainerNavbar from './components/ContainerNavbar';
 import Catalog from './pages/Catalog';
@@ -45,7 +45,6 @@ function App() {
         breakpoints={ ['xxxl', 'xxl', 'xl', 'lg', 'md', 'sm', 'xs', 'xxs'] }
         minBreakpoint="xxs"
       >
-        <ContainerNavbar/>
         <RouterProvider router={ router }/>
       </ThemeProvider>
     </div>

@@ -1,4 +1,6 @@
 import React from 'react';
+import { useNavigate } from 'react-router';
+import { useAuthContext } from '../../hooks/useAuthContext';
 import logo from '../../logo.svg';
 
 import Container from 'react-bootstrap/Container';
@@ -16,6 +18,14 @@ import { IoFileTrayFull, IoDocumentTextOutline } from "react-icons/io5";
 import "./styles.css";
 
 function ContainerNavbar() {
+  const { user, isLogged, logOut } = useAuthContext();
+  const navigate = useNavigate();
+
+  const logout = () => {
+    logOut();
+    navigate('/');
+  }
+
   return (
     <Navbar className='Navbar' collapseOnSelect fixed="top" expand="lg" bg="faded" variant="dark">
       <Container>
@@ -56,9 +66,14 @@ function ContainerNavbar() {
             <Nav.Link className='navl fw-bold' href="#locacoes">
                 <IoFileTrayFull className="m-1" size="1rem" color="#fff"/>Minhas locações
             </Nav.Link>
-            <Nav.Link className='navl fw-bold' eventKey={3} href="#login">
-              Login
-            </Nav.Link>
+            { !isLogged ?
+              <Nav.Link className='navl fw-bold' eventKey={3} href="/">
+                Login
+              </Nav.Link>
+              : <Nav.Link className='navl fw-bold' eventKey={3} onClick={ logout }>
+                { user?.name }
+              </Nav.Link>
+            }
           </Nav>
         </Navbar.Collapse>
       </Container>
