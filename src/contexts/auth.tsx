@@ -13,6 +13,7 @@ export interface AuthInterface {
   user?: UserInterface;
   signIn: (email: string, password: string) => Promise<boolean>;
   logOut: () => void;
+  isLogged: boolean;
 }
 
 interface AuthContextProps {
@@ -69,7 +70,7 @@ export const AuthProvider = ({ children }: AuthContextProps): ReactElement => {
 
   //#endregion
 
-  return <AuthContext.Provider value={{ user, signIn, logOut }}>
+  return <AuthContext.Provider value={{ user, signIn, logOut, isLogged: !!token }}>
     { children }
   </AuthContext.Provider>
 }

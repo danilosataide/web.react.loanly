@@ -1,11 +1,13 @@
 import React, { ReactElement, useState } from 'react';
 import { Form,  Button } from 'react-bootstrap';
+import { useNavigate } from 'react-router';
 import { useAuthContext } from '../../hooks/useAuthContext';
 import './styles.css';
 
 export default function Login(): ReactElement {
 
   const { signIn } = useAuthContext();
+  const navigate = useNavigate();
   const [form, setForm] = useState<{ email: string, password: string }>({
     email: '',
     password: '',
@@ -36,7 +38,12 @@ export default function Login(): ReactElement {
         <Form.Check type="checkbox" label="Mostrar senha" />
       </Form.Group>
       <div className="d-grid gap-2">
-        <Button onClick={ async () => await signIn(form.email, form.password) } variant="primary">
+        <Button onClick={ async () => {
+          const logged = await signIn(form.email, form.password);
+
+          if (logged)
+            navigate('home');
+        }} variant="primary">
           Login
         </Button>
       </div>

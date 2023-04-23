@@ -1,5 +1,5 @@
 export const environment = {
-  baseUrl: 'https://localhost:3000',
+  baseUrl: 'http://localhost:3000',
   keys: {
     token: 'TOKEN',
     user: 'USER',

@@ -6,7 +6,8 @@ export function useAuthContext(): AuthInterface {
     user,
     signIn,
     logOut,
+    isLogged
   } = useContext(AuthContext);
 
-  return { user, signIn, logOut };
+  return { user, signIn, logOut, isLogged };
 }
