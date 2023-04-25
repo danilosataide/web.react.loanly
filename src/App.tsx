@@ -10,6 +10,8 @@ import FormClient from './pages/FormClient';
 import Home from './pages/Home';
 import Login from './pages/Login';
 import Tender from './pages/Tender';
+import MyPage from './pages/MyPage';
+import Dashboard from './pages/Dashboard';
 
 function App() {
   const router = createBrowserRouter([
@@ -36,6 +38,14 @@ function App() {
     {
       path: 'formClient',
       element: <FormClient/>,
+    },
+    {
+      path: 'myPage',
+      element: <MyPage/>,
+    },
+    {
+      path: 'dashboard',
+      element: <Dashboard/>,
     },
   ]);
 

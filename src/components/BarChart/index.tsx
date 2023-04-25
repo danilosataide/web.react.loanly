@@ -1,5 +1,6 @@
 import { useRef, useEffect, useState } from "react";
 import { Chart, registerables } from 'chart.js';
+import { NumberUtils } from "@react-force/number-utils";
 
 import "./styles.css";
 
@@ -11,21 +12,28 @@ interface Props {
 const BarChart = ({ chartData }: Props) => {
     Chart.register(...registerables);
 
-    // helper function to format chart data since you do this twice
     const formatData = {
-      labels: [
-        'Horas de uso parado',
-        'Horas de uso em movimento'
-      ],
-      datasets: [{
-        label: 'My First Dataset',
-        data: [300, 50],
-        backgroundColor: [
-          'rgb(54, 162, 235)',
-          'rgb(255, 205, 86)'
-        ],
-        hoverOffset: 4
-      }]
+      labels: ["Dia X", "Dia Y", "Dia Z"],
+      datasets: [
+        {
+          label: 'Dataset 1',
+          data: [3,7,4],
+          backgroundColor: 'rgb(54, 162, 235)',
+          stack: 'Stack 0',
+        },
+        {
+          label: 'Dataset 2',
+          data: [8,5,4],
+          backgroundColor: 'rgb(90, 60, 100)',
+          stack: 'Stack 0',
+        },
+        {
+          label: 'Dataset 3',
+          data: [7,2,6],
+          backgroundColor: 'rgb(200, 60, 100)',
+          stack: 'Stack 1',
+        },
+      ]
     };
   
     // use a ref to store the chart instance since it it mutable
@@ -41,6 +49,9 @@ const BarChart = ({ chartData }: Props) => {
           data: formatData,
           options: {
                 responsive: true,
+                interaction: {
+                  intersect: false,
+                },
                 plugins: {
                   legend: {
                       position: 'bottom',
@@ -51,8 +62,11 @@ const BarChart = ({ chartData }: Props) => {
                   }
                 },
                 scales: {
+                  x: {
+                    stacked: true,
+                  },
                   y: {
-                    beginAtZero: true
+                    stacked: true
                   }
                 }
             }
