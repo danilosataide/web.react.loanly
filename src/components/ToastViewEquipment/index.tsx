@@ -18,7 +18,7 @@ function ToastViewEquipment() {
         <Toast.Header closeButton={false}>
             
             <strong className="me-auto">Empilhadeira</strong>
-            <small><Alert.Link onClick={toggleShowA} className='alert-link' href="#">Visualizar Dashboard</Alert.Link></small>
+            <small><Alert.Link onClick={toggleShowA} className='alert-link' href="dashboard">Visualizar Dashboard</Alert.Link></small>
         </Toast.Header>
         <Toast.Body>
             Modelo <strong>JCB 1160</strong>

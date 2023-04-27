@@ -42,7 +42,7 @@ function ContainerNavbar() {
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link className='fw-bold active' href="#home">Home</Nav.Link>
+            <Nav.Link className='fw-bold active' href="home">Home</Nav.Link>
             <NavDropdown className='fw-bold' title="Máquinas" id="collasible-nav-dropdown">
               <NavDropdown.Item href="#action/3.1">Escavadeiras</NavDropdown.Item>
               <NavDropdown.Item href="#action/3.2">Retroescavadeiras</NavDropdown.Item>
@@ -60,10 +60,10 @@ function ContainerNavbar() {
             </NavDropdown>
           </Nav>
           <Nav>
-            <Nav.Link className='navl fw-bold' href="#tender">
+            <Nav.Link className='navl fw-bold' href="tender">
                 <IoDocumentTextOutline className="m-1" size="1rem" color="#fff"/>Orçamento
             </Nav.Link>
-            <Nav.Link className='navl fw-bold' href="#locacoes">
+            <Nav.Link className='navl fw-bold' href="myPage">
                 <IoFileTrayFull className="m-1" size="1rem" color="#fff"/>Minhas locações
             </Nav.Link>
             { !isLogged ?

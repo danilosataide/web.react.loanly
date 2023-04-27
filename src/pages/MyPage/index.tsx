@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
-import Carousel from 'react-bootstrap/Carousel';
+import ContainerNavbar from '../../components/ContainerNavbar';
 import { Container, Row, Col } from 'react-bootstrap';
-import Imagem from '../../assets/slide_construcao_1b.jpg'
 import ToastViewEquipment from '../../components/ToastViewEquipment';
 
 import "./styles.css";
@@ -14,6 +13,8 @@ function MyPage() {
   };
   
     return (
+      <>
+      <ContainerNavbar/>
       <Container>
         <header>
             <div className="d-flex flex-column flex-md-row align-items-left pb-3 mb-4 border-bottom">
@@ -31,7 +32,7 @@ function MyPage() {
         </header>
         <main>  
           <Row xs={2} md={2} lg={4} className="justify-content-md-left g-4">
-            {Array.from({ length: 3 }).map((_, idx) => (
+            {Array.from({ length: 1 }).map((_, idx) => (
                 <Col>
                     <ToastViewEquipment/>
                 </Col>
@@ -41,6 +42,7 @@ function MyPage() {
         </main>
 
       </Container>
+      </>
     );
   }
   

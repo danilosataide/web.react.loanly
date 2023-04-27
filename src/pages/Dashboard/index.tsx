@@ -5,6 +5,7 @@ import CarouselImages from "../../components/CarouselImages";
 import { FaWeightHanging } from "react-icons/fa";
 import { ImPower } from "react-icons/im";
 
+import ContainerNavbar from "../../components/ContainerNavbar";
 import DoughnutChart from "../../components/DoughnutChart";
 import BarChart from "../../components/BarChart";
 import ProgressBar from 'react-bootstrap/ProgressBar';
@@ -15,6 +16,8 @@ function Dashboard() {
     const now = 60;
 
     return (
+        <>
+        <ContainerNavbar/>
         <Container className="container py-3">
             <header>
                 <div className="d-flex flex-column flex-md-row align-items-left pb-3 mb-4 border-bottom">
@@ -60,6 +63,7 @@ function Dashboard() {
             </Container>
             </main>
         </Container>
+        </>
     )
 }
 

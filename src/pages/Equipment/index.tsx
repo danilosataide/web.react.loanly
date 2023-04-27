@@ -47,7 +47,7 @@ function Equipment() {
                   customers with this Bootstrap example. It’s built with default Bootstrap components and utilities with
                   little customization.</p>
                 <div className="d-grid gap-2">
-                  <Button variant="primary" size="lg">
+                  <Button href="tender" variant="primary" size="lg">
                     Realize seu orçamento
                   </Button>
                 </div>

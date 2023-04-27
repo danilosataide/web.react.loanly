@@ -1,9 +1,10 @@
-import React, { ReactElement, useState } from 'react';
+import React, { ReactElement, useState, useEffect } from 'react';
 import { Form,  Button } from 'react-bootstrap';
 import { useNavigate } from 'react-router';
 import ContainerNavbar from '../../components/ContainerNavbar';
 import { useAuthContext } from '../../hooks/useAuthContext';
 import './styles.css';
+import { nullLiteralTypeAnnotation } from '@babel/types';
 
 export default function Login(): ReactElement {
 
@@ -13,6 +14,22 @@ export default function Login(): ReactElement {
     email: '',
     password: '',
   });
+
+  const [isLoading, setLoading] = useState<boolean>(false);
+
+  const login = async () => {
+    try {
+      setLoading(true);
+
+      const logged = await signIn(form.email, form.password);
+      if (logged)
+        navigate('home');
+    } catch (error) {
+      console.error(error);
+    } finally {
+      setLoading(false);
+    }
+  }
 
   return (
     <>
@@ -41,13 +58,10 @@ export default function Login(): ReactElement {
           <Form.Check type="checkbox" label="Mostrar senha" />
         </Form.Group>
         <div className="d-grid gap-2">
-          <Button onClick={ async () => {
-            const logged = await signIn(form.email, form.password);
-
-            if (logged)
-              navigate('home');
-          }} variant="primary">
-            Login
+          <Button 
+            disabled={isLoading}
+            onClick={ async () => await login() }>
+            {isLoading ? 'Loading…' : 'Login'}
           </Button>
         </div>
       </Form>

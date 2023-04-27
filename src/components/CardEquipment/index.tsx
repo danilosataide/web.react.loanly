@@ -19,12 +19,12 @@ function CardEquipment() {
               <FaWeightHanging size="1.5em" color="#00C89B"/> 3.450 Kg  
               <ImPower size="1.5em" color="#00C89B"/> 115 Hp
               </Card.Text>
-              <Button variant="faded" size="sm" className="buttonViewEquip">
+              <Button href="equipment" variant="faded" size="sm" className="buttonViewEquip">
                 Ver equipamento
                 <BsArrowRight size="1em" color="#000"/> 
               </Button>
               <div className="d-grid gap-2">
-                <Button variant="faded" size="lg" className="buttonAddBudget">
+                <Button href="tender" variant="faded" size="lg" className="buttonAddBudget">
                   Fechar orçamento
                 </Button>
               </div>

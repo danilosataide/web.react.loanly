@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Carousel from 'react-bootstrap/Carousel';
-import { Container } from 'react-bootstrap';
+import { Container, Button } from 'react-bootstrap';
 import Imagem from '../../assets/slide_construcao_1b.jpg'
 import ContainerNavbar from '../../components/ContainerNavbar';
 
@@ -19,7 +19,7 @@ function Home() {
             <div className="container-fluid py-5">
               <h1 className="display-5 fw-bold">Selecione sua linha de produtos</h1>
               <p className="col-md-8 fs-4">texto de apresentação.</p>
-              <button className="btn btn-primary btn-lg" type="button">Escolha o equipamento</button>
+              <Button href="catalog" className="btn btn-primary btn-lg" type="button">Escolha o equipamento</Button>
             </div>
           </div>
           {/* <div className="d-flex flex-column flex-md-row align-items-left pb-3 mb-4 border-bottom">
